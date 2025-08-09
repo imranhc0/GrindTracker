@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GrindTracker 🏁
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-%5E4-FF6384?logo=chart.js&logoColor=white)](https://www.chartjs.org/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-✦-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#license)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+
+## Overview
+GrindTracker is a modern, browser‑based goal tracker and productivity companion. It helps you create clear goals, break them into daily tasks, and stay motivated with a built‑in gamification system (XP, levels, streaks, milestones). Visual progress is front‑and‑center with monthly charts and a GitHub‑style heatmap, and the UI is fully responsive with dark/light themes.
+
+- 100% client‑side; your data is stored in the browser (localStorage)
+- Fast, frictionless UX optimized for daily use
+- Built with Next.js 15 + React 18 and a clean component architecture
+
+## Key Features
+- Goal creation and management
+  - One‑time or recurring goals
+  - Activate/Pause goals and edit details inline
+- Daily task tracking
+  - Quick task creation per goal
+  - Real‑time completion updates across Dashboard, Today’s Grind, and Stats
+- Gamification system
+  - Earn XP for completions; level up with celebratory visuals
+  - Track streaks and milestone achievements
+- Monthly statistics
+  - Interactive Chart.js monthly view with goal filters and month navigation
+  - Summary metrics: Completed, Active Days, Best Day
+- GitHub‑style contribution heatmap
+  - Responsive heatmap shows intensity of daily work, updated in real time
+- Dark/Light themes
+  - Theme‑aware surfaces, focus rings, and accessible contrast
+- Responsive design
+  - Optimized layouts for mobile, tablet, and desktop
+
+## Technology Stack
+- Framework: **Next.js 15** (App Router)
+- UI: **React 18**, **Tailwind CSS** (+ custom CSS variables/utilities)
+- Charts: **Chart.js** (via `react-chartjs-2`)
+- Animation: **Framer Motion**
+- State & Storage: React Context + **localStorage** (browser‑only)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ (LTS recommended)
+- npm (or pnpm/yarn)
 
+### Installation
 ```bash
+# 1) Clone the repo
+git clone https://github.com/your-org/grindtracker.git
+cd grindtracker
+
+# 2) Install dependencies
+npm install
+
+# 3) Run in development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# App will be available at http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production build
+```bash
+npm run build
+npm run start
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> Note: GrindTracker is browser‑only. No database or server config is required.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage Guide
+- Create a goal
+  - Click “New Goal”, choose one‑time or recurring, add optional deadline
+- Add daily tasks
+  - From Dashboard or Goals, click “Add Task” for any goal
+- Complete tasks
+  - Check items off in “Today’s Grind”; XP/levels/streaks update instantly
+- View progress
+  - Open the Stats section for the monthly chart, summary metrics, and heatmap
+- Switch theme
+  - Use the theme toggle in the navbar (dark/light)
 
-## Learn More
+## Screenshots
+> Replace placeholders with real screenshots or GIFs.
 
-To learn more about Next.js, take a look at the following resources:
+- Dashboard
+  - ![Dashboard Screenshot](docs/screenshots/dashboard.png)
+- Goals
+  - ![Goals Screenshot](docs/screenshots/goals.png)
+- Monthly Stats
+  - ![Stats Screenshot](docs/screenshots/stats.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure (high‑level)
+```
+src/
+  app/
+    sections/        # Dashboard, Goals, Daily, Stats (Monthly)
+    globals.css      # Tailwind + theme variables and utilities
+    layout.js        # Root layout and providers
+    page.js          # Home page composition
+  components/        # Reusable UI (Navbar, Modal, ProgressBar, Heatmap, etc.)
+  context/           # App/Theme contexts and persistence
+  lib/               # Date and storage utilities
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
+Contributions are very welcome! To propose changes:
+1. Fork the repository and create a feature branch
+2. Write clear, focused commits and open a pull request
+3. If applicable, include/update tests and screenshots
 
-## Deploy on Vercel
+Guidelines:
+- Keep PRs scope‑focused and small where possible
+- Match existing code style (lint before committing)
+- Prioritize accessibility (focus states, contrast, keyboard use)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+This project is licensed under the **MIT License**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+MIT License
+
+Copyright (c) 2025 GrindTracker contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+If you build something cool with GrindTracker, share it with us—PRs and ideas are always welcome! ✨
