@@ -1,7 +1,7 @@
 "use client";
 import { useApp } from "@/context/AppContext";
 import GoalCard from "@/components/GoalCard";
-import { todayKey } from "@/lib/date";
+
 
 import GoalsInline from "./sections/GoalsInline";
 import DailyInline from "./sections/DailyInline";
@@ -61,7 +61,7 @@ export default function Home() {
         <section id="daily" className="space-y-3 scroll-mt-24">
           <div className="flex items-center gap-2">
             <Icon name="CheckCircle" className="w-5 h-5 text-green-600" />
-            <h2 className="text-2xl font-bold">Today's Grind</h2>
+            <h2 className="text-2xl font-bold">Today&apos;s Grind</h2>
           </div>
           <div className="hr-accent" />
           <DailyInline />
