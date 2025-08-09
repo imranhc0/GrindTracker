@@ -3,8 +3,8 @@
 [![Version](https://img.shields.io/badge/Version-0.1.0-blueviolet)](./package.json)
 
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.4.6-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Chart.js](https://img.shields.io/badge/Chart.js-%5E4-FF6384?logo=chart.js&logoColor=white)](https://www.chartjs.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-✦-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
@@ -16,7 +16,7 @@ GrindTracker is a modern, browser‑based goal tracker and productivity companio
 
 - 100% client‑side; your data is stored in the browser (localStorage)
 - Fast, frictionless UX optimized for daily use
-- Built with Next.js 15 + React 18 and a clean component architecture
+- Built with Next.js 15.4.6 + React 19.1.0 and a clean component architecture
 
 ## Key Features
 - Goal creation and management
@@ -39,8 +39,8 @@ GrindTracker is a modern, browser‑based goal tracker and productivity companio
   - Optimized layouts for mobile, tablet, and desktop
 
 ## Technology Stack
-- Framework: **Next.js 15** (App Router)
-- UI: **React 18**, **Tailwind CSS** (+ custom CSS variables/utilities)
+- Framework: **Next.js 15.4.6** (App Router)
+- UI: **React 19.1.0**, **Tailwind CSS** (+ custom CSS variables/utilities)
 - Charts: **Chart.js** (via `react-chartjs-2`)
 - Animation: **Framer Motion**
 - State & Storage: React Context + **localStorage** (browser‑only)
